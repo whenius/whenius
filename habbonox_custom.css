@@ -1,0 +1,123 @@
+/* HabboNox Custom Styles: Chat & Usernames 
+   Combined by Gemini for Samet
+*/
+
+/* ==========================================================================
+   SECTION 1: CHAT & ROOM STYLES (chat.txt)
+   ========================================================================== */
+
+.sohbetOdasiBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://images.habbo.com/c_images/reception/background_gradient_Jun24.png) center/cover no-repeat;
+    border-radius: 0 0 5px 5px;
+    z-index: 0;
+}
+
+.backgroundSohbet_L {
+    background: url(https://habbonox.com/uploads/chat/background_left_Jun24.png) bottom left no-repeat;
+    border-radius: 0 0 0 5px;
+    position: absolute;
+    width: 100%;
+    min-height: 700px;
+    height: 100%;
+    z-index: 2;
+    background-position: bottom left;
+    left: 0;
+    bottom: 0;
+}
+
+.backgroundSohbetTile {
+    background: url(https://habbonox.com/uploads/chat/floorItem.png) repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+}
+
+/* Mesaj Balonları ve Genel Chat Alanı */
+#messages {
+    overflow-y: auto !important;        
+    overflow-x: hidden !important;        
+    max-height: 60vh !important;          
+    padding-right: 10px;
+}
+
+.habbonox-room-chatinput-component {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: 90%;
+}
+
+/* ==========================================================================
+   SECTION 2: SPECIAL USERNAME STYLES (usernamen.txt)
+   ========================================================================== */
+
+/* Font Tanımlamaları - Blogger'da çalışması için tam URL gerekecektir */
+@font-face { font-family: 'Harry P'; src: url('https://habbonox.com/assets/frontend/font/HARRYP.TTF') format('truetype'); }
+@font-face { font-family: 'Spongebob'; src: url('https://habbonox.com/assets/frontend/font/Spongebob.ttf') format('truetype'); }
+@font-face { font-family: 'SuperMario'; src: url('https://habbonox.com/assets/frontend/font/SuperMario256.ttf') format('truetype'); }
+@font-face { font-family: 'Habbo'; src: url('https://habbonox.com/assets/frontend/font/HabboFont.ttf') format('truetype'); }
+
+/* Özel Kullanıcı Adı Efektleri */
+.username-harry-potter {
+    font-size: 18px;
+    font-family: 'Harry P', arial, sans-serif;
+    color: #ce9d03;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.username-spongebob {
+    font-size: 14px;
+    font-family: 'Spongebob', arial, sans-serif;
+    color: #f3ec19;
+    text-shadow: 1px 1px 0 #e6a620, 2px 2px 0 #e6a620;
+}
+
+.username-supermario {
+    font-size: 14px;
+    font-family: 'SuperMario', arial, sans-serif;
+    color: #F60;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#c00000), color-stop(21%,#ff6600), color-stop(40%,#fbb007), color-stop(60%,#009c36), color-stop(80%,#0089cd), color-stop(100%,#5935b9));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.username-disney {
+    font-family: 'Disney', arial, sans-serif;
+    font-size: 16px;
+    color: #0072ff;
+}
+
+.username-blink {
+    animation: blinker 1s linear infinite;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+/* Habbo Tarzı Altın İsim */
+.username-gold {
+    color: #d4af37;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Mobil Uyumluluk Eklemeleri */
+@media (max-width: 768px) {
+    #chatModal { height: 90vh !important; }
+    .habbonox-room-chatinput-component { bottom: 18px !important; }
+}
